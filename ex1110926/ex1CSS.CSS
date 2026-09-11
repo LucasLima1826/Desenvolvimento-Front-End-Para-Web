@@ -1,0 +1,15 @@
+table, th, td{
+  border:1px solid black;
+}
+.verde{
+    background: #008000
+}
+.azul{
+    background: #87CEFA
+}
+.roxo{
+    background: #D8BFD8
+}
+.laranja{
+    background: #FFA500
+}
