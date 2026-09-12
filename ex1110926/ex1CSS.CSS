@@ -1,6 +1,15 @@
 table, th, td{
   border:1px solid black;
 }
+table{
+  border-collapse: collapse;
+  width: 100px;
+  font-size: 14px;
+}
+th, td{
+  text-align: center;
+  padding: 4px;
+}
 .verde{
     background: #008000
 }
