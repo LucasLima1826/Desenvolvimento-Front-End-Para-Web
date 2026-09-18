@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserido um grid na Página</title>
+    <style>
+        .grid-principal{
+            display: grid;
+            /*Criando colunas automaticamente cada coluna com no minimo 300px, se sobrar espaço*/
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-gap:2rem;
+            padding:20px;
+        }
+        .grid-principal div{
+            background:#ff0000;
+            padding:30px;
+            border-radius:8px;
+            text-align:center;
+        }
+        .layout-pagina{
+            display:grid;
+            grid-template-areas:
+            "header header" /*linha de cabeçalho*/
+            "sidebar main" /*coluna de cabeçalho*/
+            "footer footer"; /*conteudo principal*/
+            grid-template-columns: 300px 1fr;/*siderbar 200px, main ocupa o resto*/
+            grid-template-rows: auto 1fr auto;/*header/footer tamanho auto, main estica */
+            min-height:50vh;
+            gap: 10px;
+        }
+        .header{grid-area: header;background: #1d12bd;color: white;padding: 20px;}
+        .sidebar{grid-area: sidebar;background: #e5e5e5;color: #000000;padding: 20px;}
+        .main{grid-area: main;background: white;color: #000000;padding: 20px;border: 1px solid #ddd;}
+        .footer{grid-area: footer;background: #1e40af;color: azure;padding: 20px;}
+    </style>
+</head>
+<body>
+    <h1>Testando um grid</h1>
+
+    <hr>
+
+    <h2>1.Grid Responsavel(.grid-principal)</h2>
+    <div class="grid-principal">
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+    </div>
+
+    <hr>
+
+    <h2>2.layout de Pagina com Areas</h2>
+        <div class="layout-pagina">
+            <header class="header">header </header>
+            <aside class="sidebar">Sidebar-Menu</aside>
+            <main class="main">Main - Conteudo principal aqui</main>
+            <footer class="footer">footer </footer>
+        </div>
+</body>
+</html>
